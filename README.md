@@ -1,5 +1,5 @@
 # **SQL**
-###**Structured Query Language**
+### **Structured Query Language**
 - A programming language designed to communicate with data stored in relational database management system.
 - SQL syntax is similar to the english language. Which makes it relatively easy to read, write, and interpret.
 - RDBMS use SQL to access, manage, mauipulate, update the data in tables stored in the database schemas.
