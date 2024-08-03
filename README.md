@@ -36,6 +36,8 @@
 - `CREATE` creates an objects in the database.
 - `DROP` deletes an object from the database.
 - `ALTER` changes the definition of an existing object in the database.
+- `TRUNCATE` delete the data from the table without deleting the table structure.
+- `RENAME` renames the column names in the table.
 
 **Data Manipulation Language (DML)**  
 - SQL commands used to modify the data stored in the database.
