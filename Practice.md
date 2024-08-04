@@ -96,4 +96,93 @@ Kirankumar Yadav
 Mandira Priyadarshini
 Suraj Sanka
 Sumit Suman
-Shobita Gowda
+Shobitha Gowda
+
+```sql
+-- String operations:
+SELECT
+UPPER(first_name) AS uppercase, 
+LOWER(last_name) AS lowercase
+FROM employee
+```
+uppercase | lowercase
+:--- | :---
+KIRANKUMAR | yadav
+MANDIRA | priyadarshini
+SURAJ | sanka
+SUMIT | suman
+SHOBITHA | gowda
+
+```sql
+-- Subquery:
+SELECT first_name, designation, city 
+FROM employee
+WHERE employee_id IN (SELECT employee_id FROM department WHERE team = 'Apple')
+```
+first_name | designation | city
+:--- | :--- | :---
+Kirankumar | Data Science Specialist | Mumbai
+Mandira | Support Executive | Bengaluru
+Sumit | Python Developer | Noida
+
+```sql
+-- Join:
+SELECT employee.first_name, employee.last_name, employee.designation, department.department_name, department.project
+FROm employee
+INNER JOIN department
+ON employee.employee_id = department.employee_id
+```
+first_name | last_name | designation | department_name | project
+:--- | :--- | :--- | :--- | :---
+Kirankumar | Yadav | Data Science Specialist | Data Science | DSA 
+Mandira | Priyadarshini | Support Executive | Apple Decision Support | Apple Support
+Suraj | Sanka | DevOps Engineer | SAP BTP | APIM
+Sumit | Suman | Python Developer | Data Analytics | DSA
+Shobitha | Gowda | Java Developer | Java Core | JDK
+
+```sql
+-- CASE (Condition with only equal to operator and values):
+SELECT first_name, last_name,
+CASE gender
+  WHEN 'M' THEN 'Male'
+  WHEN 'F' THEN 'Female'
+  ELSE 'Transgender'
+END AS gender, age
+FROM Employee;
+```
+first_name | last_name | gender | age 
+:--- | :--- | :--- | :---
+Kirankumar | Yadav | Male | 28
+Mandira | Priyadarshini | Female | 26
+Suraj | Sanka | Male | 28
+Sumit | Suman | Male | 26
+Shobitha | Gowda | Female | 26
+
+```sql
+-- CASE (Conditions with <, >, <=, >=, !=, <> operators):
+SELECT first_name, last_name, 
+CASE 
+  WHEN YEAR(birth_date) < 1998 THEN 'Millenial'
+  WHEN YEAR(birth_date) BETWEEN 1998 AND 2000 THEN 'GenZ'
+  ELSE 'Monkeys'
+END AS generation, age
+FROM employee
+```
+first_name | last_name | generation | age 
+:--- | :--- | :--- | :---
+Kirankumar | Yadav | Millenial | 28
+Mandira | Priyadarshini | GenZ | 26
+Suraj | Sanka | Millenial | 28
+Sumit | Suman | GenZ | 26
+Shobitha | Gowda | GenZ | 26
+
+```sql
+-- Pattern matching:
+SELECT * FROM employee WHERE first_name LIKE 'k%'      -- starts with k
+SELECT * FROM employee WHERE first_name LIKE '%a'      -- ends with a
+SELECT * FROM employee WHERE first_name LIKE '%an%'    -- ends with a
+SELECT * FROM employee WHERE first_name LIKE '__n%'    -- Any two character words with n at 3rd place
+SELECT * FROM employee WHERE first_name LIKE 'su[rm]%' -- Starts with Su and can continue with r or m
+SELECT * FROM employee WHERE first_name LIKE '[K-M]%'  -- Starts with any character between K to M
+SELECT * FROM employee WHERE first_name LIKE '_____'   -- Exactly 5 character word
+```
