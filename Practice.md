@@ -180,23 +180,23 @@ Shobitha | Gowda | GenZ | 26
 -- Pattern matching:
 SELECT *
 FROM employee
-WHERE first_name LIKE 'k%'      -- starts with k
+WHERE first_name LIKE 'k%'      -- starts with character 'k'
 
 SELECT *
 FROM employee
-WHERE first_name LIKE '%a'      -- ends with a
+WHERE first_name LIKE '%a'      -- ends with character 'a'
 
 SELECT *
 FROM employee
-WHERE first_name LIKE '%an%'    -- ends with a
+WHERE first_name LIKE '%an%'    -- 'an' at any position in the middle
 
 SELECT *
 FROM employee
-WHERE first_name LIKE '__n%'    -- Any two character words with n at 3rd place
+WHERE first_name LIKE '__n%'    -- Any two character in the starting and 'n' at 3rd place.
 
 SELECT *
 FROM employee
-WHERE first_name LIKE 'su[rm]%' -- Starts with Su and can continue with r or m
+WHERE first_name LIKE 'su[rm]%' -- Starts with su and can continue with r or m
 
 SELECT *
 FROM employee
