@@ -178,11 +178,31 @@ Shobitha | Gowda | GenZ | 26
 
 ```sql
 -- Pattern matching:
-SELECT * FROM employee WHERE first_name LIKE 'k%'      -- starts with k
-SELECT * FROM employee WHERE first_name LIKE '%a'      -- ends with a
-SELECT * FROM employee WHERE first_name LIKE '%an%'    -- ends with a
-SELECT * FROM employee WHERE first_name LIKE '__n%'    -- Any two character words with n at 3rd place
-SELECT * FROM employee WHERE first_name LIKE 'su[rm]%' -- Starts with Su and can continue with r or m
-SELECT * FROM employee WHERE first_name LIKE '[K-M]%'  -- Starts with any character between K to M
-SELECT * FROM employee WHERE first_name LIKE '_____'   -- Exactly 5 character word
+SELECT *
+FROM employee
+WHERE first_name LIKE 'k%'      -- starts with k
+
+SELECT *
+FROM employee
+WHERE first_name LIKE '%a'      -- ends with a
+
+SELECT *
+FROM employee
+WHERE first_name LIKE '%an%'    -- ends with a
+
+SELECT *
+FROM employee
+WHERE first_name LIKE '__n%'    -- Any two character words with n at 3rd place
+
+SELECT *
+FROM employee
+WHERE first_name LIKE 'su[rm]%' -- Starts with Su and can continue with r or m
+
+SELECT *
+FROM employee
+WHERE first_name LIKE '[K-M]%'  -- Starts with any character between K to M
+
+SELECT *
+FROM employee
+WHERE first_name LIKE '_____'   -- Exactly 5 character word
 ```
