@@ -68,3 +68,32 @@ department_id | department_name | employee_id | project | team
 3 | SAP BTP | 3 | APIM | SAP
 4 | Data Analytics | 4 | DSA | Apple
 5 | Java Core | 5 | JDK | IBM
+
+```sql
+-- Extract Year, Month and Day using the birth_date column:
+SELECT 
+YEAR(birth_date) AS birth_year, 
+MONTH(birth_date) AS birth_month, 
+DAY(birth_date) AS birth_day
+FROM employee
+```
+birth_year | birth_month | birth_day
+:--- | :--- | :---
+1996 | 2 | 7
+1998 | 6 | 28
+1996 | 7 | 13
+1998 | 12 | 6
+1998 | 9 | 18
+
+```sql
+-- Concat the first_name and last_name as a name:
+SELECT first_name + ' ' + last_name AS name FROM employee
+SELECT CONCAT(first_name, ' ',last_name) AS Name from employee
+```
+name
+: ---
+Kirankumar Yadav
+Mandira Priyadarshini
+Suraj Sanka
+Sumit Suman
+Shobita Gowda
