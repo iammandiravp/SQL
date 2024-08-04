@@ -28,8 +28,8 @@ CREATE TABLE department(
 -- Insert some values in the employee table:  
 INSERT INTO employee(first_name, last_name, age, birth_date, gender, designation, city)
 VALUES('Kirankumar', 'Yadav', 28, '1996-02-07', 'M', 'Data Science Specialist', 'Mumbai'),
-	  ('Mandira', 'Priyadarshini', 26, '1998-06-28', 'F', 'Support Executive', DEFAULT),
-	  ('Suraj', 'Sanka', 28, '1996-07-13', 'M', 'DevOps Engineer', 'Andra Pradesh'),
+      ('Mandira', 'Priyadarshini', 26, '1998-06-28', 'F', 'Support Executive', DEFAULT),
+      ('Suraj', 'Sanka', 28, '1996-07-13', 'M', 'DevOps Engineer', 'Andhra Pradesh'),
       ('Sumit', 'Suman', 26, '1998-12-06', 'M', 'Python Developer', 'Noida'),
       ('Shobitha', 'Gowda', 26, '1998-09-18', 'F', 'Java Developer', DEFAULT);
 ```
@@ -37,7 +37,7 @@ VALUES('Kirankumar', 'Yadav', 28, '1996-02-07', 'M', 'Data Science Specialist', 
 -- Insert some values in the department table:
 INSERT INTO department(department_name, employee_id, project, team)
 VALUES('Data Science', 1, 'DSA', DEFAULT),
-	  ('Apple Decision Support', 2, 'Apple Support', DEFAULT),
+      ('Apple Decision Support', 2, 'Apple Support', DEFAULT),
       ('SAP BTP', 3, 'APIM', 'SAP'),
       ('Data Analytics', 4, 'DSA', DEFAULT),
       ('Java Core', 5, 'JDK', 'IBM');
@@ -50,4 +50,20 @@ FROM employee
 SELECT *
 FROM department
 ```
-```
+
+### **employee table**
+employee_id | first_name | last_name | age | birth_date | gender | designation | city
+:--- | :--- | :--- | :--- | :--- | :--- | :--- | :---
+1 | Kirankumar | Yadav | 28 | 1996-02-07 | M | Data Science Specialist | Mumbai
+2 | Mandira | Priyadarshini | 26 | 1998-06-28 | F | Support Executive | Bengaluru
+3 | Suraj | Sanka | 28 | 1996-07-13 | M | DevOps Engineer | Andhra Pradesh
+4 | Sumit | Suman | 26 | 1998-12-06 | M | Python Developer | Noida
+5 | Shobitha | Gowda | 26 | 1998-09-18 | F | Java Developer | Bengaluru
+
+### **department table**
+department_id | department_name | employee_id | project | team
+1 | Data Science | 1 | DSA | Apple
+2 | Apple Decision Support | 2 | Apple Support | Apple
+3 | SAP BTP | 3 | APIM | SAP
+4 | Data Analytics | 4 | DSA | Apple
+5 | Java Core | 5 | JDK | IBM
