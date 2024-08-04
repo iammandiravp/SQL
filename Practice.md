@@ -12,8 +12,8 @@ CREATE TABLE employee(
   designation VARCHAR(25),
   city VARCHAR(25) DEFAULT 'Bengaluru'
 );
-:
--- In MySQL use AUTO_INCREMENT instead of IDENTITY
+
+-- In MySQL use AUTO_INCREMENT instead of IDENTITY:
 CREATE TABLE employee(
   employee_id INT AUTO_INCREMENT PRIMARY KEY, -- AUTO_INCREMENT (MySQL)
   first_name VARCHAR(25),
