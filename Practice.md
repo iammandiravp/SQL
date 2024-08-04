@@ -91,7 +91,7 @@ SELECT first_name + ' ' + last_name AS name FROM employee
 SELECT CONCAT(first_name, ' ',last_name) AS Name from employee
 ```
 name
-: ---
+:---
 Kirankumar Yadav
 Mandira Priyadarshini
 Suraj Sanka
