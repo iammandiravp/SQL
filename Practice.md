@@ -62,6 +62,7 @@ employee_id | first_name | last_name | age | birth_date | gender | designation |
 
 ### **department table**
 department_id | department_name | employee_id | project | team
+:--- | :--- | :--- | :--- | :---
 1 | Data Science | 1 | DSA | Apple
 2 | Apple Decision Support | 2 | Apple Support | Apple
 3 | SAP BTP | 3 | APIM | SAP
